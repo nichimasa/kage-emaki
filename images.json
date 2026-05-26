@@ -3,38 +3,14 @@
     "file": "images/main.png",
     "title_jp": "京都幻夢",
     "title_en": "Kyoto Phantom Dream",
-    "description": "京の闇に宿る神々、妖狐、鬼、そして侍。\\nAIが紡ぐ幻想の絵巻物語。"
+    "description": "京の闇に宿る神々、妖狐、鬼、そして侍。\nAIが紡ぐ幻想の絵巻物語。"
   },
   "gallery": [
-    {
-      "file": "images/img01.png",
-      "title_jp": "稲荷の狐",
-      "title_en": "Fox of Inari Shrine",
-      "series": "I"
-    },
-    {
-      "file": "images/img02.png",
-      "title_jp": "百鬼夜行",
-      "title_en": "Night Parade of Demons",
-      "series": "II"
-    },
-    {
-      "file": "images/img03.png",
-      "title_jp": "花月温泉",
-      "title_en": "Kagetsu Hot Springs",
-      "series": "III"
-    },
-    {
-      "file": "images/img04.png",
-      "title_jp": "清水の龍神",
-      "title_en": "Dragon God of Kiyomizu",
-      "series": "IV"
-    },
-    {
-      "file": "images/img05.png",
-      "title_jp": "緋色の剣士",
-      "title_en": "Crimson Swordswoman",
-      "series": "V"
-    }
+    {"file": "images/img01.png", "title_jp": "稲荷の狐",   "title_en": "Fox of Inari Shrine",    "series": "I"},
+    {"file": "images/img02.png", "title_jp": "百鬼夜行",   "title_en": "Night Parade of Demons", "series": "II"},
+    {"file": "images/img03.png", "title_jp": "花月温泉",   "title_en": "Kagetsu Hot Springs",    "series": "III"},
+    {"file": "images/img04.png", "title_jp": "清水の龍神", "title_en": "Dragon God of Kiyomizu", "series": "IV"},
+    {"file": "images/img05.png", "title_jp": "緋色の剣士", "title_en": "Crimson Swordswoman",    "series": "V"},
+    {"file": "images/img06.png", "title_jp": "作品六",     "title_en": "Work VI",                "series": "VI"}
   ]
 }
