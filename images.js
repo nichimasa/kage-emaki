@@ -64,59 +64,60 @@ const GALLERY = [
   {
     file: "images/img07.png",
     series: "VII",
-    title_jp: "血月の百鬼街道",
-    title_en: "Blood Moon Demon Parade",
-    story_jp: "夜の京の大路に、血のような月が昇る夜。狐面の巫女と白狐を先頭に、鬼、妖、亡者が粛々と列をなして歩む。これが伝説の百鬼夜行——その行列に迷い込んだ者は、二度と人の世に戻れないという。",
-    story_en: "On a night when a blood-red moon rises over Kyoto's great avenue, a procession of demons, spirits and the undead marches solemnly, led by a fox-masked shrine maiden. This is the legendary Night Parade of a Hundred Demons. Any soul who wanders into its path never returns to the world of the living."
-  },
-  {
-    file: "images/img08.png",
-    series: "VIII",
-    title_jp: "月夜の露天風呂",
-    title_en: "Moonlit Open-Air Bath",
-    story_jp: "満月の夜、山深くに佇む露天風呂。湯煙が冷えた空気に溶け、桜の花びらが静かに湯面に降り積もる。一人の娘が遠くの灯りを眺めながら、深く息を吐いた。この静寂は、現の世のものではないかもしれない。",
-    story_en: "A moonlit night, deep in the mountains. Steam dissolves into the cold air as cherry blossoms drift silently onto the water. A young woman exhales slowly, gazing at the distant lights below. This silence may not belong to the world of the living."
-  },
-  {
-    file: "images/img09.png",
-    series: "IX",
-    title_jp: "稲荷大神の社",
+    title_jp:  "稲荷大神の社",
     title_en: "Shrine of the Great Fox God",
     story_jp: "雨降る夜、稲荷大神を祀る社が赤と青の炎に浮かび上がる。狛狐が左右に鎮座し、青い鬼火が石段を照らす。この場所に足を踏み入れた者は、神の試練を受けることになる。果たして、あなたは何を願うのか。",
     story_en: "On a rainy night, the shrine of the Great Fox God Inari glows with red lanterns and blue spirit flames. Guardian fox statues flank the steps as ghostly blue fire illuminates the stone stairway. Those who enter face a divine trial. What is it that you seek to wish for?"
   },
   {
-    file: "images/img10.png",
-    series: "X",
+    file: "images/img08.png",
+    series: "VIII",
     title_jp: "悪霊退散",
     title_en: "Exorcism at the Torii",
     story_jp: "紫電が空を裂き、巨大な鬼神が鳥居の上に降臨した夜。陰陽師と侍は背中合わせで対峙する。陰陽師の呪陣が紫の光を放ち、侍の刃が雨の中で煌めく。その言葉が嵐の中に消えていった——悪霊退散。",
     story_en: "A night when purple lightning tears the sky and a great demon god descends upon the torii. An onmyoji and a samurai stand back to back. The onmyoji's summoning circle blazes with violet light as the samurai's blade gleams through the rain. Those words vanished into the storm — Evil spirits, begone."
   },
   {
-    file: "images/img11.png",
-    series: "XI",
+    file: "images/img09.png",
+    series: "IX",
     title_jp: "桜魔京",
     title_en: "Sakura Demon Capital",
     story_jp: "満開の桜が血色の月に染まる夜、鬼将軍が橋の上で侍を待ち受けていた。龍が空を舞い、幽霊が木々の間に漂う。ここは現と幽冥が重なり合う桜魔京——刃を持つ者だけが、この夜を生き延びられる。",
     story_en: "On a night when cherry blossoms are dyed crimson by the blood moon, a demon general awaits a samurai on the bridge. A dragon soars and ghosts drift between the trees. This is Sakura Demon Capital — where the living world overlaps with the realm of the dead. Only those who carry a blade survive this night."
   },
   {
-    file: "images/img12.png",
-    series: "XII",
+    file: "images/img10.png",
+    series: "X",
     title_jp: "二寧坂の夕暮れ",
     title_en: "Twilight on Nineizaka",
     story_jp: "夕暮れ時、二寧坂の石畳に金色の光が差し込む。桜が満開に咲き誇る中、一人の女性が五重塔を目指してゆっくりと歩いていく。この坂道は、迷い込んだ者が現の世に戻れなくなるという——彼女は今日、無事に帰れるだろうか。",
     story_en: "As twilight falls, golden light pours across the stone steps of Nineizaka. Beneath cherry blossoms in full bloom, a woman walks slowly toward the five-storied pagoda. Legend says those who wander onto this slope cannot find their way back to the waking world. Will she make it home safely today?"
   },
   {
-    file: "images/img13.png",
-    series: "XIII",
+    file: "images/img11.png",
+    series: "XI",
+    title_jp: "血月の百鬼街道",
+    title_en: "Blood Moon Demon Parade",
+    story_jp: "夜の京の大路に、血のような月が昇る夜。狐面の巫女と白狐を先頭に、鬼、妖、亡者が粛々と列をなして歩む。これが伝説の百鬼夜行——その行列に迷い込んだ者は、二度と人の世に戻れないという。",
+    story_en: "On a night when a blood-red moon rises over Kyoto's great avenue, a procession of demons, spirits and the undead marches solemnly, led by a fox-masked shrine maiden. This is the legendary Night Parade of a Hundred Demons. Any soul who wanders into its path never returns to the world of the living."
+  },
+  {
+    file: "images/img12.png",
+    series: "XII",
     title_jp: "温泉街の宵",
     title_en: "Evening in the Hot Spring Town",
     story_jp: "夕暮れの温泉街に、浴衣姿の二人が並んで歩く。川沿いの旅館から湯煙が立ち上り、提灯の灯りが石畳に映える。この町には古い言い伝えがある——宵の温泉街で出会った縁は、来世まで続くのだと。",
     story_en: "Two young women in yukata stroll side by side through a hot spring town at dusk. Steam rises from the riverside inns as lantern light reflects off the stone-paved streets. An old legend speaks of this town — bonds formed here at dusk are said to last into the next life."
+  },
+  {
+    file: "images/img13.png",
+    series: "XIII",
+    title_jp: "月夜の露天風呂",
+    title_en: "Moonlit Open-Air Bath",
+    story_jp: "満月の夜、山深くに佇む露天風呂。湯煙が冷えた空気に溶け、桜の花びらが静かに湯面に降り積もる。一人の娘が遠くの灯りを眺めながら、深く息を吐いた。この静寂は、現の世のものではないかもしれない。",
+    story_en: "A moonlit night, deep in the mountains. Steam dissolves into the cold air as cherry blossoms drift silently onto the water. A young woman exhales slowly, gazing at the distant lights below. This silence may not belong to the world of the living."
   }
+ 
 
   // =====================================================
   // 新しい画像を追加するときはここにコピーして追加：
