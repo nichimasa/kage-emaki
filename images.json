@@ -3,14 +3,51 @@
     "file": "images/main.png",
     "title_jp": "京都幻夢",
     "title_en": "Kyoto Phantom Dream",
-    "description": "京の闇に宿る神々、妖狐、鬼、そして侍。\nAIが紡ぐ幻想の絵巻物語。"
+    "description": "京の闇に宿る神々、妖狐、鬼、そして侍。\nAIが紡ぐ幻想の絵巻物語。",
+    "story": "桜散る京の都に、現と幽冥の境が溶けゆく夜がある。侍は刃を携え、白狐は主を守り、百鬼は闇より這い出でる。この絵巻は、そんな一夜の幻を綴った物語の序章である。"
   },
   "gallery": [
-    {"file": "images/img01.png", "title_jp": "稲荷の狐",   "title_en": "Fox of Inari Shrine",    "series": "I"},
-    {"file": "images/img02.png", "title_jp": "百鬼夜行",   "title_en": "Night Parade of Demons", "series": "II"},
-    {"file": "images/img03.png", "title_jp": "花月温泉",   "title_en": "Kagetsu Hot Springs",    "series": "III"},
-    {"file": "images/img04.png", "title_jp": "清水の龍神", "title_en": "Dragon God of Kiyomizu", "series": "IV"},
-    {"file": "images/img05.png", "title_jp": "緋色の剣士", "title_en": "Crimson Swordswoman",    "series": "V"},
-    {"file": "images/img06.png", "title_jp": "作品六",     "title_en": "Work VI",                "series": "VI"}
+    {
+      "file": "images/img01.png",
+      "title_jp": "百鬼夜行",
+      "title_en": "Night Parade of Demons",
+      "series": "I",
+      "story": "竹林の奥、提灯の灯が揺れる道に、百の鬼が列をなして歩む夜がある。その名を百鬼夜行という。返り血に塗れた侍・蒼牙は、一人その道に立ちはだかった。鬼たちの眼が光る。しかし蒼牙は刃を下げず——「俺が通る。それだけだ」"
+    },
+    {
+      "file": "images/img02.png",
+      "title_jp": "花月温泉",
+      "title_en": "Kagetsu Hot Springs",
+      "series": "II",
+      "story": "湯煙漂う山奥の温泉郷、花月。ここは人と妖が静かに共存する、秘密の楽園。赤い橋の袂に佇む娘・花鈴は、この地の女将にして、狐神の末裔。訪れた旅人は皆、帰り道を忘れてしまうという——"
+    },
+    {
+      "file": "images/img03.png",
+      "title_jp": "清水の龍神",
+      "title_en": "Dragon God of Kiyomizu",
+      "series": "III",
+      "story": "清水寺の夜、満月が山を照らすとき、天より龍が降りるという言い伝えがある。老僧・玄海はその夜を七十年待ち続けた。「龍よ、この地に何を告げに来たのか」。龍の眼が燃えるように光り、玄海の白衣が風に舞った。"
+    },
+    {
+      "file": "images/img04.png",
+      "title_jp": "緋色の剣士",
+      "title_en": "Crimson Swordswoman",
+      "series": "IV",
+      "story": "紅葉が血のように舞い散る境内に、一人の女剣士が立つ。名は朱音。天照大神に仕える巫女にして、最後の剣鬼。彼女の白い着物に滲む赤は、散った紅葉か、それとも——鳥居の向こうに佇む影が、ゆっくりと歩み出した。"
+    },
+    {
+      "file": "images/img05.png",
+      "title_jp": "狐と侍の邂逅",
+      "title_en": "Encounter of Fox and Samurai",
+      "series": "V",
+      "story": "血月が照らす京の夜、妖狐の姫・玲と流れ者の侍・黒斗は、鳥居の前で出会った。周囲には無数の鬼と妖が溢れ、二人は背中合わせで刃と炎を構える。敵同士のはずが、今夜だけは——「信じるわけじゃない。ただ、生き延びたいだけよ」"
+    },
+    {
+      "file": "images/img06.png",
+      "title_jp": "稲荷の狐",
+      "title_en": "Fox of Inari Shrine",
+      "series": "VI",
+      "story": "満月の夜、稲荷神社の鳥居に白い影が揺れる。九つの尾を持つ神狐・白珠は、千年の時を超えて人の世を見守り続けてきた。狐面の娘はその化身か、それとも——青い炎を従えた白狐たちが、静かに頭を垂れた。"
+    }
   ]
 }
