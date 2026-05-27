@@ -191,6 +191,14 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 .char-tag-rei{background:rgba(20,60,35,.6);color:#80c8a0;border:1px solid rgba(40,140,80,.3)}
 .char-quote{font-size:.75rem;color:var(--ash);line-height:2;opacity:.7;font-style:italic;border-left:2px solid rgba(139,26,47,.3);padding-left:.75rem}
 .char-coming{text-align:center;font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);opacity:.35;letter-spacing:.2em;margin-top:1rem}
+.char-img-souma{background:linear-gradient(160deg,#1a1500,#3a3010)}
+.char-img-meiga{background:linear-gradient(160deg,#0a0010,#1a0020)}
+.char-section-label{font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--ash);letter-spacing:.2em;opacity:.5;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:1rem;grid-column:1/-1}
+.char-section-label::before,.char-section-label::after{content:"";flex:1;height:1px;background:rgba(139,26,47,.25)}
+.char-card-enemy{border-color:rgba(80,40,100,.5);box-shadow:0 0 0 1px rgba(80,40,100,.15),inset 0 0 0 1px rgba(100,50,120,.08)}
+.char-card-enemy:hover{border-color:rgba(120,60,160,.9);box-shadow:0 0 0 1px rgba(120,60,160,.3),inset 0 0 0 1px rgba(100,50,120,.12)}
+.char-tag-souma{background:rgba(60,50,10,.6);color:#d4c070;border:1px solid rgba(160,140,40,.3)}
+.char-tag-meiga{background:rgba(40,10,50,.6);color:#b080d0;border:1px solid rgba(100,40,140,.3)}
 .footer-tagline{font-family:"Shippori Mincho B1",serif;font-size:.72rem;color:var(--ash);opacity:.35;letter-spacing:.1em;text-align:center}
 @media(max-width:900px){.world-grid{grid-template-columns:1fr;gap:1.5rem}.world-card-center{padding:.5rem 0}.char-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.char-grid{grid-template-columns:1fr 1fr}.char-name-jp{font-size:1.2rem}}
@@ -383,7 +391,45 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
         </div>
       </div>
     </div>
-    <p class="char-coming reveal" style="transition-delay:.4s">— 脇役・敵キャラクターは Stories ページにて公開予定 / Supporting characters coming in the Stories section —</p>
+    
+      <div class="char-section-label">対立勢力 / Antagonists</div>
+
+      <div class="char-card char-card-enemy reveal" style="transition-delay:.1s">
+        <div class="char-badge" style="background:rgba(60,30,80,.8);color:var(--paper);border:1px solid rgba(120,60,160,.5)">人間側強硬派</div>
+        <div class="char-img-wrap char-img-souma">
+          <img src="images/souma.png" alt="蒼馬" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="char-body">
+          <p class="char-series">影絵巻 Series I</p>
+          <h3 class="char-name-jp">蒼馬</h3>
+          <p class="char-name-en">Souma</p>
+          <div class="char-divider" style="background:rgba(120,100,30,.6)"></div>
+          <div class="char-tags">
+            <span class="char-tag char-tag-souma">人間・大神官</span>
+            <span class="char-tag char-tag-souma">神気剣術</span>
+          </div>
+          <p class="char-quote">「感情は剣を鈍らせる。使命だけが、人を人たらしめる」</p>
+        </div>
+      </div>
+
+      <div class="char-card char-card-enemy reveal" style="transition-delay:.25s">
+        <div class="char-badge" style="background:rgba(40,10,50,.8);color:var(--paper);border:1px solid rgba(100,40,140,.5)">妖怪側強硬派</div>
+        <div class="char-img-wrap char-img-meiga">
+          <img src="images/meiga.png" alt="冥牙" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="char-body">
+          <p class="char-series">影絵巻 Series I</p>
+          <h3 class="char-name-jp">冥牙</h3>
+          <p class="char-name-en">Meiga</p>
+          <div class="char-divider" style="background:rgba(80,30,100,.6)"></div>
+          <div class="char-tags">
+            <span class="char-tag char-tag-meiga">大妖怪・鬼神</span>
+            <span class="char-tag char-tag-meiga">冥界の炎</span>
+          </div>
+          <p class="char-quote">「影を恐れるな。影がなければ、光もまた存在できぬのだ」</p>
+        </div>
+      </div>
+      <p class="char-coming reveal" style="transition-delay:.4s">— 脇役・敵キャラクターは Stories ページにて公開予定 / Supporting characters coming in the Stories section —</p>
   </div>
 </section>
 
