@@ -193,7 +193,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 .char-coming{text-align:center;font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);opacity:.35;letter-spacing:.2em;margin-top:1rem}
 .char-img-souma{background:linear-gradient(160deg,#1a1500,#3a3010)}
 .char-img-meiga{background:linear-gradient(160deg,#0a0010,#1a0020)}
-.char-section-label{font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--ash);letter-spacing:.2em;opacity:.5;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:1rem;grid-column:1/-1}
+.char-section-label{font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--ash);letter-spacing:.2em;opacity:.5;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:1rem;grid-column:1/-1;width:100%}
 .char-section-label::before,.char-section-label::after{content:"";flex:1;height:1px;background:rgba(139,26,47,.25)}
 .char-card-enemy{border-color:rgba(80,40,100,.5);box-shadow:0 0 0 1px rgba(80,40,100,.15),inset 0 0 0 1px rgba(100,50,120,.08)}
 .char-card-enemy:hover{border-color:rgba(120,60,160,.9);box-shadow:0 0 0 1px rgba(120,60,160,.3),inset 0 0 0 1px rgba(100,50,120,.12)}
@@ -392,9 +392,9 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
       </div>
     </div>
     
-      <div class="char-section-label" style="grid-column:1/-1">対立勢力 / Antagonists</div>
+      <div class="char-section-label">対立勢力 / Antagonists</div>
 
-      <div class="char-card char-card-enemy reveal" style="transition-delay:.1s;grid-column:1/2">
+      <div class="char-card char-card-enemy reveal" style="transition-delay:.1s">
         <div class="char-badge" style="background:rgba(60,30,80,.8);color:var(--paper);border:1px solid rgba(120,60,160,.5)">人間側強硬派</div>
         <div class="char-img-wrap char-img-souma">
           <img src="images/souma.png" alt="蒼馬" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
@@ -412,7 +412,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
         </div>
       </div>
 
-      <div class="char-card char-card-enemy reveal" style="transition-delay:.25s;grid-column:3/4">
+      <div class="char-card char-card-enemy reveal" style="transition-delay:.25s">
         <div class="char-badge" style="background:rgba(40,10,50,.8);color:var(--paper);border:1px solid rgba(100,40,140,.5)">妖怪側強硬派</div>
         <div class="char-img-wrap char-img-meiga">
           <img src="images/meiga.png" alt="冥牙" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
