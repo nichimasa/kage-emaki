@@ -148,7 +148,7 @@ const GALLERY = [
     title_en: "Pilgrimage Above the Clouds",
     story_jp: "二人が旅を始めたのは、まだ雪が残る早春のことだった。侍・玄は巫女・澪を、遠い山の神殿まで送り届けるよう命じられた。当初は無言の道連れに過ぎなかった。しかし幾つもの峠を越え、嵐をくぐり抜け、共に飢えを凌いだ夜を経て、二人の間に言葉では表せない何かが生まれていた。そしてついに、雲海を見下ろすこの場所に辿り着いた今——玄は気づいてしまった。この旅が終われば、二人は別々の道を歩まねばならないと。それでも彼は、この景色を彼女と共に見られたことを、生涯忘れないだろう。",
     story_en: "Their journey had begun in early spring, when snow still clung to the mountain passes. The samurai Gen had been charged with escorting the shrine maiden Mio to a temple deep in the distant mountains — nothing more than a silent obligation. Yet as they crossed pass after pass, weathered storms together and shared nights of quiet hunger, something beyond words had grown between them. Now, at last standing here above the sea of clouds, Gen understood with a pang what he had been unwilling to face: when this journey ended, they would each walk separate paths. Even so, he knew he would carry this moment — this view, shared with her — for the rest of his life."
-  }
+  },
  
 
   // =====================================================
