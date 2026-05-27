@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
 <!-- Google tag (gtag.js) -->
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-73RLKLP5KH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -83,7 +82,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 4vw;display:f
 .gallery-caption-hint::before{content:"";width:10px;height:1px;background:var(--ash);opacity:.55}
 .gallery-num{position:absolute;top:1rem;right:1rem;font-family:"IM Fell English",serif;font-style:italic;font-size:1.2rem;color:white;opacity:.15;z-index:3;transition:opacity .3s}
 .gallery-item:hover .gallery-num{opacity:.45}
-/* MODAL */
 .modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(5,2,4,.93);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-overlay.open{opacity:1;pointer-events:all}
 .modal{display:grid;grid-template-columns:1fr 1fr;max-width:1000px;width:100%;max-height:90vh;background:var(--deep);border:1px solid rgba(139,26,47,.4);position:relative;overflow:hidden;transform:scale(.97);transition:transform .3s}
@@ -135,6 +133,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 4vw;display:f
 .btn-crimson{display:inline-block;border:1px solid var(--crimson);color:var(--paper);text-decoration:none;padding:12px 34px;font-family:"IM Fell English",serif;font-style:italic;font-size:.82rem;letter-spacing:.2em;transition:all .4s;position:relative;overflow:hidden}
 .btn-crimson::before{content:"";position:absolute;inset:0;background:var(--crimson);transform:translateX(-101%);transition:transform .4s ease;z-index:-1}
 .btn-crimson:hover::before{transform:translateX(0)}
+/* SUZURIボタン */
+.btn-suzuri{display:inline-block;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;padding:11px 28px;font-family:"IM Fell English",serif;font-style:italic;font-size:.82rem;letter-spacing:.2em;transition:all .4s;position:relative;overflow:hidden}
+.btn-suzuri::before{content:"";position:absolute;inset:0;background:var(--gold-dim);transform:translateX(-101%);transition:transform .4s ease;z-index:-1}
+.btn-suzuri:hover::before{transform:translateX(0)}
+.btn-suzuri:hover{color:var(--paper);border-color:var(--gold)}
 footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5rem 4vw;display:flex;justify-content:space-between;align-items:center}
 .footer-logo{font-family:"Shippori Mincho B1",serif;color:var(--gold-dim);font-size:1.05rem;letter-spacing:.3em}
 .footer-copy{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;color:var(--ash);opacity:.35;letter-spacing:.1em}
@@ -207,7 +210,6 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
   </div>
   <div class="gallery-grid" id="gallery-grid"></div>
 </section>
-<!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal" id="modal">
     <div class="modal-img-wrap"><img id="modal-img" src="" alt=""></div>
@@ -257,6 +259,10 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
       <p class="contact-desc-jp">作品のご使用・コラボレーション・ご感想など、お気軽にご連絡ください。</p>
       <p class="contact-desc-en">For licensing, collaboration, or simply to share your thoughts — feel free to reach out.</p>
       <a href="mailto:your@email.com" class="btn-crimson">Send a Message</a>
+      <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(139,26,47,.2);">
+        <p style="font-family:'Shippori Mincho B1',serif;font-size:.78rem;color:var(--ash);letter-spacing:.15em;margin-bottom:1rem;opacity:.7;">グッズはこちら / Official Merchandise</p>
+        <a href="https://suzuri.jp/nichimasa" target="_blank" class="btn-suzuri">🛍 Shop on SUZURI</a>
+      </div>
     </div>
   </div>
 </section>
@@ -264,20 +270,13 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
   <div class="footer-logo">幻想絵巻 <span style="font-family:'IM Fell English',serif;font-style:italic;font-size:.7rem;opacity:.6;letter-spacing:.15em">Phantom Emaki</span></div>
   <div class="footer-copy">© 2025 Phantom Emaki — AI Fantasy Art of Japan</div>
 </footer>
-
-<!-- images.jsを読み込んでギャラリーを生成 -->
 <script src="images.js"></script>
 <script>
-// スクロールリビール
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add("visible"); obs.unobserve(e.target); }});
 }, {threshold:.08});
-
-// 作品数を表示
 document.getElementById("strip-total").textContent = GALLERY.length + 1;
 document.getElementById("gallery-count").textContent = String(GALLERY.length).padStart(2,"0");
-
-// ギャラリー生成
 const grid = document.getElementById("gallery-grid");
 GALLERY.forEach((item, i) => {
   const div = document.createElement("div");
@@ -296,13 +295,9 @@ GALLERY.forEach((item, i) => {
   grid.appendChild(div);
   obs.observe(div);
 });
-
 document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
-
-// モーダル
 const overlay = document.getElementById("modal-overlay");
 let current = 0;
-
 function openModal(i) {
   current = i;
   const item = GALLERY[i];
@@ -315,12 +310,10 @@ function openModal(i) {
   overlay.classList.add("open");
   document.body.style.overflow = "hidden";
 }
-
 function closeModal() {
   overlay.classList.remove("open");
   document.body.style.overflow = "";
 }
-
 document.getElementById("modal-close").onclick = closeModal;
 overlay.addEventListener("click", e => { if(e.target === overlay) closeModal(); });
 document.getElementById("modal-prev").onclick = () => openModal((current - 1 + GALLERY.length) % GALLERY.length);
@@ -331,8 +324,6 @@ document.addEventListener("keydown", e => {
   if(e.key === "ArrowLeft") openModal((current - 1 + GALLERY.length) % GALLERY.length);
   if(e.key === "ArrowRight") openModal((current + 1) % GALLERY.length);
 });
-
-// 言語タブ
 document.querySelectorAll(".lang-tab").forEach(tab => {
   tab.onclick = () => {
     document.querySelectorAll(".lang-tab").forEach(t => t.classList.remove("active"));
