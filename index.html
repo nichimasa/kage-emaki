@@ -167,10 +167,8 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 .world-story-text{font-size:.85rem;color:var(--ash);line-height:2.4;opacity:.9;margin-bottom:.4rem}
 .world-story-text-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);line-height:2;opacity:.5}
 .characters-section{background:var(--ink);padding:7rem 4vw}
-.char-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
-.char-grid-enemy{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
-.char-grid-enemy .char-card:first-child{grid-column:1/2}
-.char-grid-enemy .char-card:last-child{grid-column:3/4}
+
+
 .char-card{border:2px solid rgba(139,26,47,.5);background:var(--deep);position:relative;overflow:hidden;transition:border-color .3s,transform .3s;box-shadow:0 0 0 1px rgba(139,26,47,.15),inset 0 0 0 1px rgba(200,169,110,.08)}
 .char-card:hover{border-color:rgba(192,38,62,.9);transform:translateY(-4px);box-shadow:0 0 0 1px rgba(192,38,62,.3),inset 0 0 0 1px rgba(200,169,110,.12)}
 .char-badge{position:absolute;top:1rem;left:1rem;font-family:"IM Fell English",serif;font-style:italic;font-size:.58rem;letter-spacing:.15em;padding:2px 10px;z-index:3}
@@ -196,15 +194,21 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 .char-coming{text-align:center;font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);opacity:.35;letter-spacing:.2em;margin-top:1rem}
 .char-img-souma{background:linear-gradient(160deg,#1a1500,#3a3010)}
 .char-img-meiga{background:linear-gradient(160deg,#0a0010,#1a0020)}
-.char-section-label{font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--ash);letter-spacing:.2em;opacity:.5;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:1rem;width:100%}
-.char-section-label::before,.char-section-label::after{content:"";flex:1;height:1px;background:rgba(139,26,47,.25)}
+
+
 .char-card-enemy{border-color:rgba(80,40,100,.5);box-shadow:0 0 0 1px rgba(80,40,100,.15),inset 0 0 0 1px rgba(100,50,120,.08)}
 .char-card-enemy:hover{border-color:rgba(120,60,160,.9);box-shadow:0 0 0 1px rgba(120,60,160,.3),inset 0 0 0 1px rgba(100,50,120,.12)}
 .char-tag-souma{background:rgba(60,50,10,.6);color:#d4c070;border:1px solid rgba(160,140,40,.3)}
 .char-tag-meiga{background:rgba(40,10,50,.6);color:#b080d0;border:1px solid rgba(100,40,140,.3)}
 .footer-tagline{font-family:"Shippori Mincho B1",serif;font-size:.72rem;color:var(--ash);opacity:.35;letter-spacing:.1em;text-align:center}
-@media(max-width:900px){.world-grid{grid-template-columns:1fr;gap:1.5rem}.world-card-center{padding:.5rem 0}.char-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.char-grid{grid-template-columns:1fr 1fr}.char-name-jp{font-size:1.2rem}}
+@media(max-width:900px){.world-grid{grid-template-columns:1fr;gap:1.5rem}.world-card-center{padding:.5rem 0}}
+@media(max-width:600px){.char-name-jp{font-size:1.2rem}}
+
+.all-chars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
+.chars-divider-label{grid-column:1/-1;font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--ash);letter-spacing:.2em;opacity:.5;margin:1.5rem 0 .5rem;display:flex;align-items:center;gap:1rem;width:100%}
+.chars-divider-label::before,.chars-divider-label::after{content:"";flex:1;height:1px;background:rgba(139,26,47,.25)}
+.char-badge-souma{background:rgba(60,30,80,.8);color:var(--paper);border:1px solid rgba(120,60,160,.5)}
+.char-badge-meiga{background:rgba(40,10,50,.8);color:var(--paper);border:1px solid rgba(100,40,140,.5)}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:900px){
@@ -333,7 +337,13 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 
 <section class="characters-section" id="characters">
   <div class="world-inner">
-    <div class="reveal" style="text-align:center<div class="char-grid">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label" style="justify-content:center;">Characters / 登場人物</div>
+      <h2 class="section-title-jp">影絵巻の人々</h2>
+      <p class="section-title-en">The Players of the Phantom Scroll</p>
+    </div>
+
+    <div class="all-chars-grid">
       <div class="char-card reveal">
         <div class="char-badge char-badge-main">主人公</div>
         <div class="char-img-wrap char-img-kyoga">
@@ -351,6 +361,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
           <p class="char-quote">「俺に居場所はない。だからこそ、どちらの世界も見える」</p>
         </div>
       </div>
+
       <div class="char-card reveal" style="transition-delay:.15s">
         <div class="char-badge char-badge-human">人間側</div>
         <div class="char-img-wrap char-img-akane">
@@ -368,6 +379,7 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
           <p class="char-quote">「神託は止めよと言った。でも私は、なぜ止めなければならないのかを知りたい」</p>
         </div>
       </div>
+
       <div class="char-card reveal" style="transition-delay:.3s">
         <div class="char-badge char-badge-yokai">妖怪側</div>
         <div class="char-img-wrap char-img-rei">
@@ -385,13 +397,11 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
           <p class="char-quote">「ねえ鏡牙、私はあんたが必要なんだけどね」</p>
         </div>
       </div>
-    </div>
 
-    <div class="char-section-label">対立勢力 / Antagonists</div>
+      <div class="chars-divider-label">対立勢力 / Antagonists</div>
 
-    <div class="char-grid-enemy">
       <div class="char-card char-card-enemy reveal" style="transition-delay:.1s">
-        <div class="char-badge" style="background:rgba(60,30,80,.8);color:var(--paper);border:1px solid rgba(120,60,160,.5)">人間側強硬派</div>
+        <div class="char-badge char-badge-souma">人間側強硬派</div>
         <div class="char-img-wrap char-img-souma">
           <img src="images/souma.png" alt="蒼馬" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
         </div>
@@ -407,8 +417,9 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
           <p class="char-quote">「感情は剣を鈍らせる。使命だけが、人を人たらしめる」</p>
         </div>
       </div>
+
       <div class="char-card char-card-enemy reveal" style="transition-delay:.25s">
-        <div class="char-badge" style="background:rgba(40,10,50,.8);color:var(--paper);border:1px solid rgba(100,40,140,.5)">妖怪側強硬派</div>
+        <div class="char-badge char-badge-meiga">妖怪側強硬派</div>
         <div class="char-img-wrap char-img-meiga">
           <img src="images/meiga.png" alt="冥牙" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
         </div>
@@ -424,280 +435,9 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
           <p class="char-quote">「影を恐れるな。影がなければ、光もまた存在できぬのだ」</p>
         </div>
       </div>
-    </div>TYPE html>
-<html lang="ja">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-73RLKLP5KH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-73RLKLP5KH');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>影絵巻 — Kage Emaki</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho+B1:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#0a0608;--deep:#110a0e;--crimson:#8b1a2f;--crimson-bright:#c0263e;--gold:#c8a96e;--gold-dim:#8a6e3e;--ash:#b8a898;--paper:#f0e8d8}
-html{scroll-behavior:smooth}
-body{font-family:"Noto Serif JP",serif;background:var(--ink);color:var(--ash);overflow-x:hidden}
-.petals-wrap{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}
-.petal{position:absolute;width:6px;height:6px;background:var(--crimson);border-radius:50% 0 50% 0;opacity:0;animation:fall linear infinite}
-@keyframes fall{0%{opacity:0;transform:translateY(-20px) rotate(0deg)}10%{opacity:.5}90%{opacity:.2}100%{opacity:0;transform:translateY(100vh) rotate(720deg) translateX(60px)}}
-.petal:nth-child(1){left:7%;animation-duration:12s;animation-delay:0s}.petal:nth-child(2){left:19%;animation-duration:9s;animation-delay:2s;background:var(--gold-dim);width:4px;height:4px}.petal:nth-child(3){left:33%;animation-duration:14s;animation-delay:.5s}.petal:nth-child(4){left:48%;animation-duration:11s;animation-delay:3s;width:7px;height:7px}.petal:nth-child(5){left:60%;animation-duration:8s;animation-delay:1s;background:var(--gold-dim)}.petal:nth-child(6){left:72%;animation-duration:13s;animation-delay:4s;width:4px;height:4px}.petal:nth-child(7){left:84%;animation-duration:10s;animation-delay:1.5s}.petal:nth-child(8){left:92%;animation-duration:15s;animation-delay:.8s;background:var(--gold-dim)}.petal:nth-child(9){left:26%;animation-duration:11s;animation-delay:5s}.petal:nth-child(10){left:55%;animation-duration:9s;animation-delay:6s}
-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 4vw;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,6,8,.96) 0%,transparent 100%)}
-.nav-logo{font-family:"Shippori Mincho B1",serif;font-size:1.3rem;color:var(--gold);letter-spacing:.3em;text-decoration:none}
-.nav-logo span{font-family:"IM Fell English",serif;font-style:italic;font-size:.72rem;color:var(--ash);display:block;letter-spacing:.2em;opacity:.6}
-.nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{font-family:"IM Fell English",serif;font-style:italic;font-size:.82rem;letter-spacing:.18em;color:var(--ash);text-decoration:none;transition:color .3s;position:relative}
-.nav-links a::after{content:"";position:absolute;bottom:-4px;left:0;right:100%;height:1px;background:var(--crimson-bright);transition:right .3s ease}
-.nav-links a:hover{color:var(--gold)}.nav-links a:hover::after{right:0}
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
-.hero-poster{position:relative;background:#0d0509;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:100vh}
-.hero-poster img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;max-height:100vh;animation:heroPulse 18s ease-in-out infinite alternate}
-@keyframes heroPulse{from{transform:scale(1);filter:brightness(.85) saturate(1.1)}to{transform:scale(1.04);filter:brightness(.9) saturate(1.2)}}
-.hero-poster::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,rgba(10,6,8,1) 100%);pointer-events:none}
-.hero-panel{display:flex;flex-direction:column;justify-content:center;padding:8rem 4vw 4rem 3rem;background:linear-gradient(135deg,rgba(10,6,8,1) 0%,rgba(17,10,14,1) 100%);position:relative;overflow:hidden}
-.hero-panel::before{content:"夢";position:absolute;right:-1rem;bottom:0;font-family:"Shippori Mincho B1",serif;font-size:22rem;color:var(--crimson);opacity:.04;line-height:1;pointer-events:none}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.hero-eyebrow{font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--crimson-bright);letter-spacing:.25em;margin-bottom:1.2rem;display:flex;align-items:center;gap:10px;animation:fadeUp 1.2s .3s ease both}
-.hero-eyebrow::before{content:"";width:20px;height:1px;background:var(--crimson-bright)}
-.hero-title-jp{font-family:"Shippori Mincho B1",serif;font-size:clamp(3rem,5.5vw,6rem);color:var(--paper);letter-spacing:.15em;line-height:1.1;text-shadow:0 4px 40px rgba(139,26,47,.5);margin-bottom:.3rem;animation:fadeUp 1.2s .4s ease both}
-.hero-title-en{font-family:"IM Fell English",serif;font-style:italic;font-size:clamp(.9rem,1.6vw,1.2rem);color:var(--gold);letter-spacing:.3em;margin-bottom:2rem;animation:fadeUp 1.2s .5s ease both;opacity:.85}
-.hero-divider{width:40px;height:1px;background:linear-gradient(to right,var(--crimson-bright),transparent);margin-bottom:1.75rem;animation:fadeUp 1.2s .55s ease both}
-.hero-desc-jp{font-size:.88rem;color:var(--ash);line-height:2.2;opacity:.9;margin-bottom:.6rem;animation:fadeUp 1.2s .6s ease both}
-.hero-desc-en{font-family:"IM Fell English",serif;font-size:.8rem;color:var(--ash);line-height:1.9;opacity:.55;margin-bottom:2.5rem;font-style:italic;animation:fadeUp 1.2s .65s ease both}
-.hero-cta{display:inline-block;border:1px solid var(--crimson);color:var(--paper);text-decoration:none;padding:13px 32px;font-family:"IM Fell English",serif;font-style:italic;font-size:.85rem;letter-spacing:.2em;transition:all .4s;position:relative;overflow:hidden;animation:fadeUp 1.2s .7s ease both;align-self:flex-start}
-.hero-cta::before{content:"";position:absolute;inset:0;background:var(--crimson);transform:translateX(-101%);transition:transform .4s ease;z-index:-1}
-.hero-cta:hover::before{transform:translateX(0)}.hero-cta:hover{border-color:var(--crimson-bright)}
-.hero-featured{position:absolute;bottom:2.5rem;left:3rem;display:flex;align-items:center;gap:1rem;animation:fadeUp 1.2s .9s ease both}
-.hero-featured-line{width:30px;height:1px;background:var(--crimson-bright)}
-.hero-featured-text{font-family:"IM Fell English",serif;font-style:italic;font-size:.68rem;color:var(--ash);letter-spacing:.2em;opacity:.6}
-.info-strip{background:var(--deep);border-top:1px solid rgba(139,26,47,.3);border-bottom:1px solid rgba(139,26,47,.2);padding:1.75rem 4vw;display:flex;align-items:center;gap:3rem;overflow-x:auto}
-.strip-item{display:flex;align-items:center;gap:.9rem;white-space:nowrap;flex-shrink:0}
-.strip-num{font-family:"IM Fell English",serif;font-style:italic;font-size:1.8rem;color:var(--crimson-bright);opacity:.45;line-height:1}
-.strip-label-jp{font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--paper);letter-spacing:.12em;display:block}
-.strip-label-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.67rem;color:var(--ash);letter-spacing:.1em;opacity:.55}
-.strip-div{width:1px;height:36px;background:rgba(139,26,47,.3);flex-shrink:0}
-.gallery-section{background:var(--ink);padding:7rem 4vw}
-.gallery-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem}
-.section-label{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;letter-spacing:.3em;color:var(--crimson-bright);margin-bottom:.5rem;display:flex;align-items:center;gap:10px}
-.section-label::before{content:"";width:18px;height:1px;background:var(--crimson-bright)}
-.section-title-jp{font-family:"Shippori Mincho B1",serif;font-size:clamp(1.8rem,3.5vw,3rem);color:var(--paper);letter-spacing:.12em;line-height:1.2}
-.section-title-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.85rem;color:var(--gold-dim);letter-spacing:.2em;margin-top:.2rem;opacity:.8}
-.gallery-count{font-family:"IM Fell English",serif;font-style:italic;font-size:4.5rem;color:var(--crimson);opacity:.18;line-height:1}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.gallery-item{position:relative;overflow:hidden;background:#1a0f14;aspect-ratio:3/4;cursor:pointer}
-.gallery-item:nth-child(3n+1){aspect-ratio:2/3}.gallery-item:nth-child(3n+2){aspect-ratio:3/4}.gallery-item:nth-child(3n){aspect-ratio:4/5}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82) saturate(1.1);transition:transform .9s cubic-bezier(.25,.46,.45,.94),filter .5s}
-.gallery-item:hover img{transform:scale(1.07);filter:brightness(.68) saturate(1.4)}
-.gallery-item::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(10,6,8,.97) 100%);z-index:2;opacity:0;transition:opacity .5s}
-.gallery-item:hover::before{opacity:1}
-.gallery-item::after{content:"";position:absolute;inset:0;border:1px solid var(--crimson);opacity:0;z-index:4;transition:opacity .3s;pointer-events:none}
-.gallery-item:hover::after{opacity:.7}
-.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.25rem 1.25rem;z-index:3;transform:translateY(8px);opacity:0;transition:all .4s ease}
-.gallery-item:hover .gallery-caption{transform:translateY(0);opacity:1}
-.gallery-tag{display:inline-block;border:1px solid var(--crimson);color:var(--crimson-bright);font-family:"IM Fell English",serif;font-style:italic;font-size:.58rem;letter-spacing:.18em;padding:2px 8px;margin-bottom:5px}
-.gallery-caption-jp{font-family:"Shippori Mincho B1",serif;font-size:.95rem;color:var(--paper);letter-spacing:.18em;margin-bottom:1px}
-.gallery-caption-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;color:var(--gold);letter-spacing:.1em;margin-bottom:8px;opacity:.85}
-.gallery-caption-hint{font-family:"IM Fell English",serif;font-style:italic;font-size:.63rem;color:var(--ash);opacity:.55;letter-spacing:.1em;display:flex;align-items:center;gap:6px}
-.gallery-caption-hint::before{content:"";width:10px;height:1px;background:var(--ash);opacity:.55}
-.gallery-num{position:absolute;top:1rem;right:1rem;font-family:"IM Fell English",serif;font-style:italic;font-size:1.2rem;color:white;opacity:.15;z-index:3;transition:opacity .3s}
-.gallery-item:hover .gallery-num{opacity:.45}
-.modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(5,2,4,.93);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
-.modal-overlay.open{opacity:1;pointer-events:all}
-.modal{display:grid;grid-template-columns:1fr 1fr;max-width:1000px;width:100%;max-height:90vh;background:var(--deep);border:1px solid rgba(139,26,47,.4);position:relative;overflow:hidden;transform:scale(.97);transition:transform .3s}
-.modal-overlay.open .modal{transform:scale(1)}
-.modal-img-wrap{position:relative;overflow:hidden;background:#0d0509;min-height:400px}
-.modal-img-wrap img{width:100%;height:100%;object-fit:contain;display:block;max-height:90vh}
-.modal-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,transparent 80%,var(--deep) 100%);pointer-events:none}
-.modal-body{padding:2.5rem 2.5rem 4rem;display:flex;flex-direction:column;justify-content:center;overflow-y:auto;max-height:90vh}
-.modal-series{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;color:var(--crimson-bright);letter-spacing:.25em;margin-bottom:.8rem;display:flex;align-items:center;gap:10px}
-.modal-series::before{content:"";width:16px;height:1px;background:var(--crimson-bright)}
-.modal-title-jp{font-family:"Shippori Mincho B1",serif;font-size:clamp(1.6rem,2.8vw,2.6rem);color:var(--paper);letter-spacing:.15em;line-height:1.2;margin-bottom:.2rem;text-shadow:0 2px 20px rgba(139,26,47,.4)}
-.modal-title-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.92rem;color:var(--gold);letter-spacing:.2em;margin-bottom:1.75rem;opacity:.85}
-.modal-divider{width:36px;height:1px;background:linear-gradient(to right,var(--crimson-bright),transparent);margin-bottom:1.5rem}
-.lang-tabs{display:flex;margin-bottom:1.25rem;border-bottom:1px solid rgba(139,26,47,.25)}
-.lang-tab{font-family:"IM Fell English",serif;font-style:italic;font-size:.75rem;letter-spacing:.18em;color:var(--ash);padding:.5rem 1.2rem .6rem;cursor:pointer;border:none;background:transparent;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .3s;opacity:.5}
-.lang-tab:hover{opacity:.8;color:var(--paper)}
-.lang-tab.active{color:var(--gold);border-bottom-color:var(--crimson-bright);opacity:1}
-.story-panel{display:none}
-.story-panel.active{display:block}
-.modal-story{font-size:.87rem;color:var(--ash);line-height:2.4;opacity:.9;border-left:2px solid rgba(139,26,47,.4);padding-left:1.25rem}
-.modal-story.en{font-family:"IM Fell English",serif;font-size:.85rem;line-height:2.2;font-style:italic}
-.modal-close{position:absolute;top:1.25rem;right:1.25rem;width:36px;height:36px;border:1px solid rgba(139,26,47,.4);background:rgba(10,6,8,.8);color:var(--ash);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all .3s;font-size:1rem;line-height:1}
-.modal-close:hover{border-color:var(--crimson-bright);color:var(--paper);background:rgba(139,26,47,.2)}
-.modal-nav{position:absolute;bottom:1.5rem;right:2.5rem;display:flex;gap:.75rem}
-.modal-nav-btn{width:36px;height:36px;border:1px solid rgba(139,26,47,.35);background:transparent;color:var(--ash);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:.9rem}
-.modal-nav-btn:hover{border-color:var(--crimson-bright);color:var(--paper);background:rgba(139,26,47,.15)}
-.about-section{background:var(--deep);padding:7rem 4vw;position:relative;overflow:hidden}
-.about-section::before{content:"幻";position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:"Shippori Mincho B1",serif;font-size:28rem;color:var(--crimson);opacity:.03;line-height:1;pointer-events:none}
-.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.about-quote-jp{font-family:"Shippori Mincho B1",serif;font-size:clamp(1.1rem,2vw,1.5rem);color:var(--gold);letter-spacing:.25em;line-height:2.2;border-left:2px solid var(--crimson);padding-left:1.5rem;margin:1.5rem 0 .75rem}
-.about-quote-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.82rem;color:var(--ash);line-height:1.9;padding-left:1.5rem;border-left:2px solid rgba(139,26,47,.25);margin-bottom:1.5rem;opacity:.6}
-.about-body-jp{font-size:.86rem;color:var(--ash);line-height:2.4;opacity:.85;margin-bottom:.5rem}
-.about-body-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);line-height:2;opacity:.5}
-.about-cards{display:flex;flex-direction:column;gap:1.2rem}
-.about-card{border:1px solid rgba(139,26,47,.25);padding:1.4rem 1.6rem;background:rgba(139,26,47,.03);transition:border-color .3s,background .3s;display:flex;gap:1.2rem;align-items:flex-start}
-.about-card:hover{border-color:rgba(192,38,62,.5);background:rgba(139,26,47,.07)}
-.about-card-num{font-family:"IM Fell English",serif;font-style:italic;font-size:1.5rem;color:var(--crimson-bright);opacity:.35;flex-shrink:0;line-height:1;margin-top:2px}
-.about-card-title-jp{font-family:"Shippori Mincho B1",serif;font-size:.9rem;color:var(--paper);letter-spacing:.12em;margin-bottom:1px}
-.about-card-title-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.72rem;color:var(--gold-dim);letter-spacing:.1em;margin-bottom:.35rem;opacity:.7}
-.about-card-body{font-size:.76rem;color:var(--ash);line-height:1.9;opacity:.7}
-.contact-section{background:var(--ink);padding:7rem 4vw;text-align:center}
-.contact-box{max-width:520px;margin:0 auto;border:1px solid rgba(139,26,47,.35);padding:3rem 2.5rem;position:relative;background:rgba(139,26,47,.03)}
-.contact-box::before{content:"✦";position:absolute;top:1rem;left:1rem;color:var(--crimson);opacity:.4;font-size:.8rem}
-.contact-box::after{content:"✦";position:absolute;bottom:1rem;right:1rem;color:var(--crimson);opacity:.4;font-size:.8rem}
-.contact-title-jp{font-family:"Shippori Mincho B1",serif;font-size:1.7rem;color:var(--paper);letter-spacing:.2em;margin-bottom:.2rem}
-.contact-title-en{font-family:"IM Fell English",serif;font-style:italic;color:var(--gold-dim);font-size:.85rem;letter-spacing:.2em;margin-bottom:1.5rem;opacity:.8}
-.contact-desc-jp{font-size:.82rem;color:var(--ash);line-height:2.2;margin-bottom:.4rem;opacity:.85}
-.contact-desc-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.76rem;color:var(--ash);line-height:1.9;margin-bottom:2rem;opacity:.5}
-.btn-crimson{display:inline-block;border:1px solid var(--crimson);color:var(--paper);text-decoration:none;padding:12px 34px;font-family:"IM Fell English",serif;font-style:italic;font-size:.82rem;letter-spacing:.2em;transition:all .4s;position:relative;overflow:hidden}
-.btn-crimson::before{content:"";position:absolute;inset:0;background:var(--crimson);transform:translateX(-101%);transition:transform .4s ease;z-index:-1}
-.btn-crimson:hover::before{transform:translateX(0)}
-/* SUZURIボタン */
-.btn-suzuri{display:inline-block;border:1px solid var(--gold-dim);color:var(--gold);text-decoration:none;padding:11px 28px;font-family:"IM Fell English",serif;font-style:italic;font-size:.82rem;letter-spacing:.2em;transition:all .4s;position:relative;overflow:hidden}
-.btn-suzuri::before{content:"";position:absolute;inset:0;background:var(--gold-dim);transform:translateX(-101%);transition:transform .4s ease;z-index:-1}
-.btn-suzuri:hover::before{transform:translateX(0)}
-.btn-suzuri:hover{color:var(--paper);border-color:var(--gold)}
-footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5rem 4vw;display:flex;justify-content:space-between;align-items:center}
-.footer-logo{font-family:"Shippori Mincho B1",serif;color:var(--gold-dim);font-size:1.05rem;letter-spacing:.3em}
-.footer-copy{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;color:var(--ash);opacity:.35;letter-spacing:.1em}
 
-.world-section{background:var(--deep);padding:7rem 4vw;position:relative;overflow:hidden}
-.world-section::before{content:"影";position:absolute;left:-2rem;top:50%;transform:translateY(-50%);font-family:"Shippori Mincho B1",serif;font-size:28rem;color:var(--crimson);opacity:.03;line-height:1;pointer-events:none}
-.world-inner{max-width:1100px;margin:0 auto}
-.world-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center;margin-bottom:3rem}
-.world-card{border:1px solid rgba(139,26,47,.25);padding:2rem 1.75rem;background:rgba(139,26,47,.03)}
-.world-card-light{border-color:rgba(200,169,110,.2);background:rgba(200,169,110,.03)}
-.world-card-dark{border-color:rgba(80,60,120,.3);background:rgba(60,40,100,.05)}
-.world-card-icon{font-size:1.8rem;margin-bottom:.8rem;opacity:.6}
-.world-card-title-jp{font-family:"Shippori Mincho B1",serif;font-size:1.6rem;color:var(--paper);letter-spacing:.2em;margin-bottom:.2rem}
-.world-card-title-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.72rem;color:var(--gold-dim);letter-spacing:.15em;margin-bottom:.8rem;opacity:.7}
-.world-card-divider{width:24px;height:1px;background:var(--crimson);margin-bottom:.8rem;opacity:.5}
-.world-card-body{font-size:.8rem;color:var(--ash);line-height:2.2;opacity:.85;margin-bottom:.4rem}
-.world-card-body-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.73rem;color:var(--ash);line-height:1.9;opacity:.5}
-.world-card-center{text-align:center;padding:1rem}
-.world-vs{font-family:"Shippori Mincho B1",serif;font-size:1.1rem;color:var(--crimson-bright);letter-spacing:.2em;margin-bottom:.6rem;display:flex;flex-direction:column;gap:.1rem}
-.world-vs span{font-family:"IM Fell English",serif;font-style:italic;font-size:.65rem;color:var(--ash);opacity:.5;letter-spacing:.2em}
-.world-center-text{font-size:.75rem;color:var(--ash);line-height:2;opacity:.7;margin-bottom:.3rem}
-.world-center-text-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.68rem;color:var(--ash);line-height:1.8;opacity:.4}
-.world-story{border:1px solid rgba(139,26,47,.2);padding:2rem 2.5rem;background:rgba(139,26,47,.03);position:relative}
-.world-story::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--crimson),transparent)}
-.world-story-label{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;color:var(--crimson-bright);letter-spacing:.25em;margin-bottom:.8rem;display:flex;align-items:center;gap:10px}
-.world-story-label::before{content:"";width:16px;height:1px;background:var(--crimson-bright)}
-.world-story-text{font-size:.85rem;color:var(--ash);line-height:2.4;opacity:.9;margin-bottom:.4rem}
-.world-story-text-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);line-height:2;opacity:.5}
-.characters-section{background:var(--ink);padding:7rem 4vw}
-.char-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
-.char-grid-enemy{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
-.char-grid-enemy .char-card:first-child{grid-column:1/2}
-.char-grid-enemy .char-card:last-child{grid-column:3/4}
-.char-card{border:2px solid rgba(139,26,47,.5);background:var(--deep);position:relative;overflow:hidden;transition:border-color .3s,transform .3s;box-shadow:0 0 0 1px rgba(139,26,47,.15),inset 0 0 0 1px rgba(200,169,110,.08)}
-.char-card:hover{border-color:rgba(192,38,62,.9);transform:translateY(-4px);box-shadow:0 0 0 1px rgba(192,38,62,.3),inset 0 0 0 1px rgba(200,169,110,.12)}
-.char-badge{position:absolute;top:1rem;left:1rem;font-family:"IM Fell English",serif;font-style:italic;font-size:.58rem;letter-spacing:.15em;padding:2px 10px;z-index:3}
-.char-badge-main{background:rgba(139,26,47,.8);color:var(--paper);border:1px solid var(--crimson-bright)}
-.char-badge-human{background:rgba(180,130,50,.8);color:var(--paper);border:1px solid var(--gold)}
-.char-badge-yokai{background:rgba(60,100,80,.8);color:var(--paper);border:1px solid #4a8060}
-.char-img-wrap{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--ink)}
-.char-img-kyoga{background:linear-gradient(160deg,#0a0a1e,#1a1a3a)}
-.char-img-akane{background:linear-gradient(160deg,#2a0810,#5a1525)}
-.char-img-rei{background:linear-gradient(160deg,#081a10,#1a3a25)}
-
-.char-body{padding:1.25rem 1.25rem 1.5rem}
-.char-series{font-family:"IM Fell English",serif;font-style:italic;font-size:.6rem;color:var(--crimson-bright);letter-spacing:.2em;margin-bottom:.3rem;opacity:.7}
-.char-name-jp{font-family:"Shippori Mincho B1",serif;font-size:1.5rem;color:var(--paper);letter-spacing:.2em;margin-bottom:.1rem}
-.char-name-en{font-family:"IM Fell English",serif;font-style:italic;font-size:.72rem;color:var(--gold-dim);letter-spacing:.15em;margin-bottom:.75rem;opacity:.7}
-.char-divider{width:20px;height:1px;background:var(--crimson);margin-bottom:.75rem;opacity:.5}
-.char-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
-.char-tag{font-size:.58rem;padding:2px 8px;border-radius:2px;letter-spacing:.05em}
-.char-tag-kyoga{background:rgba(40,40,80,.6);color:#a0a8cc;border:1px solid rgba(100,100,180,.3)}
-.char-tag-akane{background:rgba(80,20,30,.6);color:#e0a0a8;border:1px solid rgba(180,60,80,.3)}
-.char-tag-rei{background:rgba(20,60,35,.6);color:#80c8a0;border:1px solid rgba(40,140,80,.3)}
-.char-quote{font-size:.75rem;color:var(--ash);line-height:2;opacity:.7;font-style:italic;border-left:2px solid rgba(139,26,47,.3);padding-left:.75rem}
-.char-coming{text-align:center;font-family:"IM Fell English",serif;font-style:italic;font-size:.78rem;color:var(--ash);opacity:.35;letter-spacing:.2em;margin-top:1rem}
-.char-img-souma{background:linear-gradient(160deg,#1a1500,#3a3010)}
-.char-img-meiga{background:linear-gradient(160deg,#0a0010,#1a0020)}
-.char-section-label{font-family:"Shippori Mincho B1",serif;font-size:.8rem;color:var(--ash);letter-spacing:.2em;opacity:.5;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:1rem;width:100%}
-.char-section-label::before,.char-section-label::after{content:"";flex:1;height:1px;background:rgba(139,26,47,.25)}
-.char-card-enemy{border-color:rgba(80,40,100,.5);box-shadow:0 0 0 1px rgba(80,40,100,.15),inset 0 0 0 1px rgba(100,50,120,.08)}
-.char-card-enemy:hover{border-color:rgba(120,60,160,.9);box-shadow:0 0 0 1px rgba(120,60,160,.3),inset 0 0 0 1px rgba(100,50,120,.12)}
-.char-tag-souma{background:rgba(60,50,10,.6);color:#d4c070;border:1px solid rgba(160,140,40,.3)}
-.char-tag-meiga{background:rgba(40,10,50,.6);color:#b080d0;border:1px solid rgba(100,40,140,.3)}
-.footer-tagline{font-family:"Shippori Mincho B1",serif;font-size:.72rem;color:var(--ash);opacity:.35;letter-spacing:.1em;text-align:center}
-@media(max-width:900px){.world-grid{grid-template-columns:1fr;gap:1.5rem}.world-card-center{padding:.5rem 0}.char-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.char-grid{grid-template-columns:1fr 1fr}.char-name-jp{font-size:1.2rem}}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .hero-poster{min-height:65vh}
-  .hero-panel{padding:4rem 5vw}
-  .modal{grid-template-columns:1fr;max-height:95vh;overflow-y:auto}
-  .modal-img-wrap{min-height:40vw;max-height:40vh;flex-shrink:0}
-  .modal-img-wrap::after{background:linear-gradient(to bottom,transparent 80%,var(--deep) 100%)}
-  .modal-body{padding:1.5rem 1.25rem 5rem;overflow-y:visible;max-height:none;justify-content:flex-start}
-  .modal-nav{position:fixed;bottom:1rem;right:1rem}
-  .modal-close{position:fixed;top:1rem;right:1rem}
-  .about-inner{grid-template-columns:1fr;gap:3rem}
-  .about-section::before{display:none}
-  footer{flex-direction:column;gap:1rem;text-align:center}
-}
-@media(max-width:600px){
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  nav{padding:1rem 1.5rem}
-  .nav-links{gap:1.5rem}
-  .modal{border-radius:0;max-height:100vh;height:100vh}
-  .modal-overlay{padding:0}
-  .modal-img-wrap{max-height:35vh}
-  .modal-title-jp{font-size:1.4rem}
-  .modal-title-en{font-size:.78rem;margin-bottom:1rem}
-  .modal-body{padding:1.25rem 1rem 5rem}
-  .modal-story{font-size:.82rem;line-height:2.2}
-  .modal-story.en{font-size:.78rem}
-  .lang-tabs{margin-bottom:1rem}
-  .lang-tab{font-size:.7rem;padding:.4rem .9rem .5rem}
-}
-</style>
-</head>
-<body>
-<div class="petals-wrap">
-  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
-  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
-  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
-  <div class="petal"></div>
-</div>
-<nav>
-  <a href="#" class="nav-logo">影絵巻<span>Kage Emaki — Shadow Scroll</span></a>
-  <ul class="nav-links">
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#world">World</a></li>
-    <li><a href="#characters">Characters</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<section class="hero">
-  <div class="hero-poster">
-    <img src="images/main.png" alt="京都幻夢">
-    <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,rgba(10,6,8,1) 100%);pointer-events:none;z-index:1"></div>
-  </div>
-  <div class="hero-panel">
-    <p class="hero-eyebrow">AI Fantasy Art — Japanese Dark Fantasy</p>
-    <h1 class="hero-title-jp">影絵巻</h1>
-    <p class="hero-title-en">Kage Emaki — Shadow Scroll of Two Worlds</p>
-    <div class="hero-divider"></div>
-    <p class="hero-desc-jp">光の世界「現世」と、その裏に広がる影の世界「影世」。<br>二つの世界の境界が揺らぎ始めた時、<br>半人半妖の剣士・鏡牙の物語が始まる。</p>
-    <p class="hero-desc-en">Two worlds exist as one — the world of light, and the world of shadow that lies beneath. When the boundary between them begins to dissolve, the story of Kyoga, a warrior of two bloods, begins.</p>
-    <a href="#gallery" class="hero-cta">Explore the Gallery</a>
-    <div class="hero-featured">
-      <div class="hero-featured-line"></div>
-      <span class="hero-featured-text">Opening — 境界が、揺らぎ始めた / The boundary begins to fade</span>
     </div>
+    <p class="char-coming reveal" style="transition-delay:.4s">— 脇役・敵キャラクターは Stories ページにて公開予定 / Supporting characters coming in the Stories section —</p>
   </div>
 </section>
 <div class="info-strip">
