@@ -143,8 +143,35 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 .footer-copy{font-family:"IM Fell English",serif;font-style:italic;font-size:.7rem;color:var(--ash);opacity:.35;letter-spacing:.1em}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-poster{min-height:65vh}.hero-panel{padding:4rem 5vw}.modal{grid-template-columns:1fr}.modal-img-wrap{min-height:45vw;max-height:45vh}.modal-img-wrap::after{background:linear-gradient(to bottom,transparent 80%,var(--deep) 100%)}.modal-body{padding:1.75rem 1.5rem 4rem}.about-inner{grid-template-columns:1fr;gap:3rem}.about-section::before{display:none}footer{flex-direction:column;gap:1rem;text-align:center}}
-@media(max-width:600px){.gallery-grid{grid-template-columns:1fr 1fr}nav{padding:1rem 1.5rem}.nav-links{gap:1.5rem}}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-poster{min-height:65vh}
+  .hero-panel{padding:4rem 5vw}
+  .modal{grid-template-columns:1fr;max-height:95vh;overflow-y:auto}
+  .modal-img-wrap{min-height:40vw;max-height:40vh;flex-shrink:0}
+  .modal-img-wrap::after{background:linear-gradient(to bottom,transparent 80%,var(--deep) 100%)}
+  .modal-body{padding:1.5rem 1.25rem 5rem;overflow-y:visible;max-height:none;justify-content:flex-start}
+  .modal-nav{position:fixed;bottom:1rem;right:1rem}
+  .modal-close{position:fixed;top:1rem;right:1rem}
+  .about-inner{grid-template-columns:1fr;gap:3rem}
+  .about-section::before{display:none}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+}
+@media(max-width:600px){
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  nav{padding:1rem 1.5rem}
+  .nav-links{gap:1.5rem}
+  .modal{border-radius:0;max-height:100vh;height:100vh}
+  .modal-overlay{padding:0}
+  .modal-img-wrap{max-height:35vh}
+  .modal-title-jp{font-size:1.4rem}
+  .modal-title-en{font-size:.78rem;margin-bottom:1rem}
+  .modal-body{padding:1.25rem 1rem 5rem}
+  .modal-story{font-size:.82rem;line-height:2.2}
+  .modal-story.en{font-size:.78rem}
+  .lang-tabs{margin-bottom:1rem}
+  .lang-tab{font-size:.7rem;padding:.4rem .9rem .5rem}
+}
 </style>
 </head>
 <body>
@@ -315,23 +342,4 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 document.getElementById("modal-close").onclick = closeModal;
-overlay.addEventListener("click", e => { if(e.target === overlay) closeModal(); });
-document.getElementById("modal-prev").onclick = () => openModal((current - 1 + GALLERY.length) % GALLERY.length);
-document.getElementById("modal-next").onclick = () => openModal((current + 1) % GALLERY.length);
-document.addEventListener("keydown", e => {
-  if(!overlay.classList.contains("open")) return;
-  if(e.key === "Escape") closeModal();
-  if(e.key === "ArrowLeft") openModal((current - 1 + GALLERY.length) % GALLERY.length);
-  if(e.key === "ArrowRight") openModal((current + 1) % GALLERY.length);
-});
-document.querySelectorAll(".lang-tab").forEach(tab => {
-  tab.onclick = () => {
-    document.querySelectorAll(".lang-tab").forEach(t => t.classList.remove("active"));
-    document.querySelectorAll(".story-panel").forEach(p => p.classList.remove("active"));
-    tab.classList.add("active");
-    document.getElementById("story-" + tab.dataset.lang).classList.add("active");
-  };
-});
-</script>
-</body>
-</html>
+overlay
