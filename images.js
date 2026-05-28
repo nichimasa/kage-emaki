@@ -14,12 +14,28 @@ const FEATURED = {
 
 const GALLERY = [
   {
-    file: "images/img01.png",
-    series: "I",
-    title_jp: "竹林の鬼狩り",
-    title_en: "Demon Hunter of the Bamboo Grove",
-    story_jp: "雨に濡れた竹林の奥、提灯に照らされた百鬼夜行の文字が揺れる。侍・影牙は刃を抜き、静かに息を整えた。左右の竹から無数の鬼と亡者が這い出でる——目玉の妖、角を持つ鬼、黒髪の幽霊。しかし影牙は動じない。俺を喰らいたければ、かかってこい。石段の先、鳥居だけが静かにそこにあった。",
-    story_en: "Deep within a rain-soaked bamboo grove, a paper lantern sways bearing the words Night Parade of a Hundred Demons. The samurai Kagekiba draws his blade and steadies his breath. From the bamboo on all sides, countless demons crawl forth — eyeball spirits, horned oni, black-haired ghosts. Yet Kagekiba does not flinch. Come at me if you dare. Beyond the stone steps, the torii gate stood silent and waiting."
+    file: "images/prologue_shrine.png",
+    series: "序章",
+    title_jp: "影世の社",
+    title_en: "The Shrine Between Worlds",
+    story_jp: "朱色の鳥居が並ぶ神社は、昼間はただの古社だ。しかし夜が更け、月が中天に昇る頃、その姿は変わり始める。鳥居の朱は褪せ、参道の石灯籠はひとつ残らず消え、代わりに青白い光が宙に浮かぶ。影世——現世の裏に重なり合うもう一つの世界が、薄く透けて見えるようになる時間。上には現世の鮮やかな朱、下には影世の古びた石。境界が、今夜もっとも薄くなっていた。",
+    story_en: "By day, the shrine is nothing more than an old place of worship. But as night deepens and the moon climbs high, it begins to change. The red of the torii fades. The stone lanterns vanish, replaced by pale light drifting in the air. Above, the vivid crimson of the living world. Below, the ancient stone of the shadow world. The boundary between them had never been thinner than tonight."
+  },
+  {
+    file: "images/prologue_kyoga_bamboo.png",
+    series: "序章",
+    title_jp: "竹林に立つ影",
+    title_en: "Shadow in the Bamboo Grove",
+    story_jp: "竹林の奥に入ると、空気が変わった。現世の竹の青さの向こうに、枯れ果てた灰色の竹が透けて見える。影世だ。両方が重なっている場所。影の獣が境界を越えようとしていた——人間には見えない、感じることさえできない。しかし鏡牙には見えた。刀を抜いた瞬間、動いた。音もなく、迷いもなく。黒刀が宙を薙ぎ、影の獣は霧散した。",
+    story_en: "Deeper in the bamboo grove, the air shifted. Beyond the living green, grey and withered stalks of the shadow world shimmered faintly. A creature of mist and darkness was pressing against the boundary, trying to cross through. Humans would never see it. But Kyoga saw it clearly. The moment he drew his blade, he moved — silent, without hesitation. The black steel swept through the air, and the shadow creature dissolved into nothing."
+  },
+  {
+    file: "images/prologue_rei_convergence.png",
+    series: "序章",
+    title_jp: "世界の回帰",
+    title_en: "The Convergence Begins",
+    story_jp: "竹の幹にもたれた玲の目が細くなった。飄々とした笑いが消え、代わりに何か重いものが宿った。「境界が薄くなってる。この半年、ずっと。影世の古老たちは『世界の回帰』が始まったって言ってる——現世と影世が、元のひとつの世界に戻ろうとしてる」。青い狐火が静かに揺れ、満月が竹林の隙間から二重に重なって見えた。",
+    story_en: "Rei's easy smile faded, replaced by something heavy. 'The boundary is thinning. For the past six months, without pause. The elders of the shadow world say it has begun — the Convergence. The world of light and the world of shadow, trying to become one again.' The blue fox-fires swayed in silence. Above, the full moon shimmered doubled through the bamboo — two moons failing to align."
   },
   {
     file: "images/img02.png",
