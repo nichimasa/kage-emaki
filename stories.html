@@ -101,6 +101,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 4vw;display:f
 .scene-img-wrap:hover img{filter:brightness(.95) saturate(1.2)}
 .scene-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,transparent 85%,rgba(10,6,8,.6) 100%);pointer-events:none}
 
+/* 横長画像（上に配置・テキスト下） */
+.scene-img-wide{margin-bottom:2rem}
+.scene-img-wide img{width:100%;height:auto;display:block}
+.scene-img-wide::after{background:linear-gradient(to bottom,transparent 70%,rgba(10,6,8,.7) 100%)}
+
 /* 画像なし（横長プレースホルダー） */
 .scene-img-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1a0f14 0%,#2a1520 50%,#1a0f14 100%);display:flex;align-items:center;justify-content:center;margin-bottom:2rem;position:relative;overflow:hidden}
 .scene-img-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1a0f14 0%,#2a1520 50%,#1a0f14 100%);display:flex;align-items:center;justify-content:center;margin-bottom:2rem;position:relative;overflow:hidden}
@@ -255,11 +260,8 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
       <!-- 場面２ -->
       <div class="scene reveal">
         <div class="scene-num">02</div>
-        <div class="scene-img-placeholder">
-          <div>
-            <div class="scene-img-placeholder-text">竹林の鬼狩り</div>
-            <span class="scene-img-placeholder-en">The Swordsman in the Bamboo</span>
-          </div>
+        <div class="scene-img-wrap scene-img-wide">
+          <img src="images/prologue_kyoga_bamboo.png" alt="竹林に立つ影 — Shadow in the Bamboo Grove" loading="lazy">
         </div>
         <div class="scene-meta">
           <span class="scene-label">Scene 02</span>
