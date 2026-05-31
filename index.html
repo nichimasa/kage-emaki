@@ -192,7 +192,26 @@ footer{background:var(--ink);border-top:1px solid rgba(139,26,47,.2);padding:2.5
 }
 @media(max-width:600px){
   nav{padding:1rem 1.5rem}
-  .nav-links{gap:1.5rem}
+  .nav-logo span{display:none}
+  .nav-links{gap:1.2rem}
+  .nav-links a{font-size:.75rem;letter-spacing:.08em}
+  .hero-panel{padding:8rem 5vw 5rem}
+  .hero-featured{display:none}
+  .gallery-teaser-section{padding:4.5rem 4vw}
+  .about-section{padding:4.5rem 4vw}
+  .contact-section{padding:4.5rem 4vw}
+  .contact-box{padding:2rem 1.5rem}
+  .all-chars-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .characters-section{padding:4.5rem 4vw}
+  .world-section{padding:4.5rem 4vw}
+  footer{padding:2rem 4vw}
+  .footer-tagline{display:none}
+}
+@media(max-width:400px){
+  .nav-links{gap:.8rem}
+  .nav-links a{font-size:.7rem}
+  .all-chars-grid{grid-template-columns:1fr}
+  .hero-title-jp{font-size:3rem}
 }
 </style>
 </head>
